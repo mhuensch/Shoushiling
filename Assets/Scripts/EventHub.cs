@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EventHub : MonoBehaviour {
 
-  public enum AgentTypes { None, Rock, Paper, Scissors }
+  public enum AgentTypes { None, Rock, Paper, Scissors, Bomb, Scout }
 
   public delegate void AgentTypeSelectedDelegate(AgentTypes type);
   public static event AgentTypeSelectedDelegate OnAgentTypeSelected;

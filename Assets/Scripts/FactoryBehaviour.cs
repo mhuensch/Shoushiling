@@ -11,6 +11,8 @@ public class FactoryBehaviour : MonoBehaviour {
   public GameObject PaperPrefab;
   public GameObject ScissorPrefab;
   public GameObject RockPrefab;
+  public GameObject BombPrefab;
+  public GameObject ScoutPrefab;
 
   public Vector3 RallyPoint;
 
@@ -25,7 +27,9 @@ public class FactoryBehaviour : MonoBehaviour {
     _prefabsByType = new Dictionary<EventHub.AgentTypes, GameObject> {
       { EventHub.AgentTypes.Paper, PaperPrefab },
       { EventHub.AgentTypes.Scissors, ScissorPrefab },
-      { EventHub.AgentTypes.Rock, RockPrefab }
+      { EventHub.AgentTypes.Rock, RockPrefab },
+      { EventHub.AgentTypes.Bomb, BombPrefab },
+      { EventHub.AgentTypes.Scout, ScoutPrefab }
     };
 
     _rallyLine = this.gameObject.AddComponent<LineRenderer>();

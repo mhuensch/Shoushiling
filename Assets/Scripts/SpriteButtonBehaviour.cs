@@ -20,7 +20,9 @@ public class SpriteButtonBehaviour : MonoBehaviour {
     _spritesByType = new Dictionary<EventHub.AgentTypes, string> {
       { EventHub.AgentTypes.Paper, "Wind Icon" },
       { EventHub.AgentTypes.Scissors, "Fire Icon" },
-      { EventHub.AgentTypes.Rock, "Ice Icon" }
+      { EventHub.AgentTypes.Rock, "Ice Icon" },
+      { EventHub.AgentTypes.Bomb, "Bomb Icon" },
+      { EventHub.AgentTypes.Scout, "Angel Icon" }
     };
 
     string resourceName = _spritesByType[_agentType];
