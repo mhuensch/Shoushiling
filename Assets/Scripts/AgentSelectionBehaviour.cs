@@ -35,19 +35,22 @@ public class AgentSelectionBehaviour : MonoBehaviour {
   private void UpdateClickSelect () {
     // If the left mouse button isn't down, we don't want to process anything
     if (Input.GetMouseButtonDown(0) == false) return;
+    // Debug.Log("Right Mouse Clicked");
 
     // Find out where the mouse clicked by casting a ray.
     // NOTE: this is much more reliable than puting an OnMouseClick event handler
     // on a collider (which is intermittenyly buggy)
     Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+    // Debug.Log($"Ray: {ray}");
 
     // Raycast to determine if the mouse is on an agent.
     RaycastHit hitData;
-    if (Physics.Raycast(ray, out hitData, Mathf.Infinity, _agentLayer)) {
+    if (Physics.Raycast(ray, out hitData, 100, _agentLayer)) {
+      // Debug.Log("Agent Hit By Ray");
       // Confirm that the object we hit has an agent behaviour.
       AgentBehaviour agent = hitData.transform.gameObject.GetComponent<AgentBehaviour>();
       if (agent == null) {
-        Debug.LogWarning("An item was clicked on the agent layer that does not implement the Agent Behaviour.");
+        // Debug.LogWarning("An item was clicked on the agent layer that does not implement the Agent Behaviour.");
         return;
       }
 
@@ -134,13 +137,13 @@ public class AgentSelectionBehaviour : MonoBehaviour {
   }
 
   private void SelectAgent (AgentBehaviour agent) {
-    Debug.Log($"Adding: {agent}");
+    // Debug.Log($"Adding: {agent}");
     _selected.Add(agent);
     EventHub.AgentSelected(agent);
   }
 
   private void DeselectAgent (AgentBehaviour agent) {
-    Debug.Log($"Removing: {agent}");
+    // Debug.Log($"Removing: {agent}");
     _selected.Remove(agent);
     EventHub.AgentDeSelected(agent);
   }

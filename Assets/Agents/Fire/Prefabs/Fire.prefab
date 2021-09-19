@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1320993476}
   - component: {fileID: 1320993478}
   - component: {fileID: 1320993477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FX Spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1403127920217250816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigJaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4843,7 +4843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7662345939967282918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigHair4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4874,7 +4874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5808367189360045159}
   - component: {fileID: 7660664156075073131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4962,7 +4962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659441045658977304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4997,8 +4997,8 @@ GameObject:
   - component: {fileID: 4086731965301292012}
   - component: {fileID: -1330456243836410631}
   - component: {fileID: 5852567291164570971}
-  - component: {fileID: -3815125849779666131}
-  m_Layer: 0
+  - component: {fileID: 6598041490106532741}
+  m_Layer: 7
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5100,12 +5100,12 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &-3815125849779666131
-MeshCollider:
+  m_CollisionDetection: 3
+--- !u!135 &6598041490106532741
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5114,10 +5114,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &2712975248723504729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5127,7 +5126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7775918001446495956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5160,7 +5159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994945964860198866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigHair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5191,7 +5190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7083565918389989758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigHair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5222,7 +5221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3981075506662852290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RigHair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
