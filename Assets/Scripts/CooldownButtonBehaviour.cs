@@ -17,12 +17,12 @@ public class CooldownButtonBehaviour : MonoBehaviour {
   private void OnAgentBuilding (EventHub.AgentTypes type, float cooldown) {
     _button.interactable = false;
     _cooldown = cooldown;
-    _cooldownImage.fillAmount = 1;
+    _cooldownImage.fillAmount = 0;
   }
 
   private void Update () {
-    _button.interactable = _cooldownImage.fillAmount == 0;
-    _cooldownImage.fillAmount -= 1 / _cooldown * Time.deltaTime;
+    _button.interactable = _cooldownImage.fillAmount == 1;
+    _cooldownImage.fillAmount += 1 / _cooldown * Time.deltaTime;
   }
 
   private void Destroy () {

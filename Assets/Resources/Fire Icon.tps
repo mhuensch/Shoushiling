@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>Wind Icon.tpsheet</filename>
+                <filename>Fire Icon.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -181,36 +181,36 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../Gifs/Icon-0.png</key>
-            <key type="filename">../Gifs/Icon-1.png</key>
-            <key type="filename">../Gifs/Icon-10.png</key>
-            <key type="filename">../Gifs/Icon-11.png</key>
-            <key type="filename">../Gifs/Icon-12.png</key>
-            <key type="filename">../Gifs/Icon-13.png</key>
-            <key type="filename">../Gifs/Icon-14.png</key>
-            <key type="filename">../Gifs/Icon-15.png</key>
-            <key type="filename">../Gifs/Icon-16.png</key>
-            <key type="filename">../Gifs/Icon-17.png</key>
-            <key type="filename">../Gifs/Icon-18.png</key>
-            <key type="filename">../Gifs/Icon-19.png</key>
-            <key type="filename">../Gifs/Icon-2.png</key>
-            <key type="filename">../Gifs/Icon-20.png</key>
-            <key type="filename">../Gifs/Icon-21.png</key>
-            <key type="filename">../Gifs/Icon-22.png</key>
-            <key type="filename">../Gifs/Icon-23.png</key>
-            <key type="filename">../Gifs/Icon-24.png</key>
-            <key type="filename">../Gifs/Icon-25.png</key>
-            <key type="filename">../Gifs/Icon-26.png</key>
-            <key type="filename">../Gifs/Icon-27.png</key>
-            <key type="filename">../Gifs/Icon-28.png</key>
-            <key type="filename">../Gifs/Icon-29.png</key>
-            <key type="filename">../Gifs/Icon-3.png</key>
-            <key type="filename">../Gifs/Icon-4.png</key>
-            <key type="filename">../Gifs/Icon-5.png</key>
-            <key type="filename">../Gifs/Icon-6.png</key>
-            <key type="filename">../Gifs/Icon-7.png</key>
-            <key type="filename">../Gifs/Icon-8.png</key>
-            <key type="filename">../Gifs/Icon-9.png</key>
+            <key type="filename">../Gifs/fire/Icon-0.png</key>
+            <key type="filename">../Gifs/fire/Icon-1.png</key>
+            <key type="filename">../Gifs/fire/Icon-10.png</key>
+            <key type="filename">../Gifs/fire/Icon-11.png</key>
+            <key type="filename">../Gifs/fire/Icon-12.png</key>
+            <key type="filename">../Gifs/fire/Icon-13.png</key>
+            <key type="filename">../Gifs/fire/Icon-14.png</key>
+            <key type="filename">../Gifs/fire/Icon-15.png</key>
+            <key type="filename">../Gifs/fire/Icon-16.png</key>
+            <key type="filename">../Gifs/fire/Icon-17.png</key>
+            <key type="filename">../Gifs/fire/Icon-18.png</key>
+            <key type="filename">../Gifs/fire/Icon-19.png</key>
+            <key type="filename">../Gifs/fire/Icon-2.png</key>
+            <key type="filename">../Gifs/fire/Icon-20.png</key>
+            <key type="filename">../Gifs/fire/Icon-21.png</key>
+            <key type="filename">../Gifs/fire/Icon-22.png</key>
+            <key type="filename">../Gifs/fire/Icon-23.png</key>
+            <key type="filename">../Gifs/fire/Icon-24.png</key>
+            <key type="filename">../Gifs/fire/Icon-25.png</key>
+            <key type="filename">../Gifs/fire/Icon-26.png</key>
+            <key type="filename">../Gifs/fire/Icon-27.png</key>
+            <key type="filename">../Gifs/fire/Icon-28.png</key>
+            <key type="filename">../Gifs/fire/Icon-29.png</key>
+            <key type="filename">../Gifs/fire/Icon-3.png</key>
+            <key type="filename">../Gifs/fire/Icon-4.png</key>
+            <key type="filename">../Gifs/fire/Icon-5.png</key>
+            <key type="filename">../Gifs/fire/Icon-6.png</key>
+            <key type="filename">../Gifs/fire/Icon-7.png</key>
+            <key type="filename">../Gifs/fire/Icon-8.png</key>
+            <key type="filename">../Gifs/fire/Icon-9.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -219,45 +219,45 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>250,250,500,500</rect>
+                <rect>75,75,150,150</rect>
                 <key>scale9Paddings</key>
-                <rect>250,250,500,500</rect>
+                <rect>75,75,150,150</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../Gifs/Icon-0.png</filename>
-            <filename>../Gifs/Icon-1.png</filename>
-            <filename>../Gifs/Icon-10.png</filename>
-            <filename>../Gifs/Icon-11.png</filename>
-            <filename>../Gifs/Icon-12.png</filename>
-            <filename>../Gifs/Icon-13.png</filename>
-            <filename>../Gifs/Icon-14.png</filename>
-            <filename>../Gifs/Icon-15.png</filename>
-            <filename>../Gifs/Icon-16.png</filename>
-            <filename>../Gifs/Icon-17.png</filename>
-            <filename>../Gifs/Icon-18.png</filename>
-            <filename>../Gifs/Icon-19.png</filename>
-            <filename>../Gifs/Icon-2.png</filename>
-            <filename>../Gifs/Icon-20.png</filename>
-            <filename>../Gifs/Icon-21.png</filename>
-            <filename>../Gifs/Icon-22.png</filename>
-            <filename>../Gifs/Icon-23.png</filename>
-            <filename>../Gifs/Icon-24.png</filename>
-            <filename>../Gifs/Icon-25.png</filename>
-            <filename>../Gifs/Icon-26.png</filename>
-            <filename>../Gifs/Icon-27.png</filename>
-            <filename>../Gifs/Icon-28.png</filename>
-            <filename>../Gifs/Icon-29.png</filename>
-            <filename>../Gifs/Icon-3.png</filename>
-            <filename>../Gifs/Icon-4.png</filename>
-            <filename>../Gifs/Icon-5.png</filename>
-            <filename>../Gifs/Icon-6.png</filename>
-            <filename>../Gifs/Icon-7.png</filename>
-            <filename>../Gifs/Icon-8.png</filename>
-            <filename>../Gifs/Icon-9.png</filename>
+            <filename>../Gifs/fire/Icon-0.png</filename>
+            <filename>../Gifs/fire/Icon-1.png</filename>
+            <filename>../Gifs/fire/Icon-10.png</filename>
+            <filename>../Gifs/fire/Icon-11.png</filename>
+            <filename>../Gifs/fire/Icon-12.png</filename>
+            <filename>../Gifs/fire/Icon-13.png</filename>
+            <filename>../Gifs/fire/Icon-14.png</filename>
+            <filename>../Gifs/fire/Icon-15.png</filename>
+            <filename>../Gifs/fire/Icon-16.png</filename>
+            <filename>../Gifs/fire/Icon-17.png</filename>
+            <filename>../Gifs/fire/Icon-18.png</filename>
+            <filename>../Gifs/fire/Icon-19.png</filename>
+            <filename>../Gifs/fire/Icon-2.png</filename>
+            <filename>../Gifs/fire/Icon-20.png</filename>
+            <filename>../Gifs/fire/Icon-21.png</filename>
+            <filename>../Gifs/fire/Icon-22.png</filename>
+            <filename>../Gifs/fire/Icon-23.png</filename>
+            <filename>../Gifs/fire/Icon-24.png</filename>
+            <filename>../Gifs/fire/Icon-25.png</filename>
+            <filename>../Gifs/fire/Icon-26.png</filename>
+            <filename>../Gifs/fire/Icon-27.png</filename>
+            <filename>../Gifs/fire/Icon-28.png</filename>
+            <filename>../Gifs/fire/Icon-29.png</filename>
+            <filename>../Gifs/fire/Icon-3.png</filename>
+            <filename>../Gifs/fire/Icon-4.png</filename>
+            <filename>../Gifs/fire/Icon-5.png</filename>
+            <filename>../Gifs/fire/Icon-6.png</filename>
+            <filename>../Gifs/fire/Icon-7.png</filename>
+            <filename>../Gifs/fire/Icon-8.png</filename>
+            <filename>../Gifs/fire/Icon-9.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

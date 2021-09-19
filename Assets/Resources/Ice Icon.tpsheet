@@ -4,10 +4,10 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:6a07a3c4c34d4553c6c24ff38c782f79:4801b5a20ba448900d8292bb3fd95569:b4063dea2dc3862e3f752f1c5aea8f75$
+# $TexturePacker:SmartUpdate:6e0b3fa35188be9133106b133c1983ba:650f6a363140d5be65ff0995e965b260:ea3e5d57d58e258112a140ce7586781b$
 #
 :format=40300
-:texture=Wind Icon.png
+:texture=Ice Icon.png
 :size=2048x2048
 :pivotpoints=enabled
 :borders=disabled

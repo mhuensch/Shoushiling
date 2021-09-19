@@ -132,7 +132,7 @@
             <key>datafile</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>Wind Icon.tpsheet</filename>
+                <filename>Bomb Icon.tpsheet</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -219,9 +219,9 @@
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>250,250,500,500</rect>
+                <rect>75,75,150,150</rect>
                 <key>scale9Paddings</key>
-                <rect>250,250,500,500</rect>
+                <rect>75,75,150,150</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>

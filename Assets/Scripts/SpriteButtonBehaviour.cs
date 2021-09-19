@@ -14,8 +14,20 @@ public class SpriteButtonBehaviour : MonoBehaviour {
   private void Start () {
     _button = this.GetComponent<Button>();
     _spriteImage = this.GetComponent<Image>();
-    _sprites = Resources.LoadAll<Sprite>("Wind Icon");
+
     _timePerFrame = 1f / _frameRate;
+
+    _spritesByType = new Dictionary<EventHub.AgentTypes, string> {
+      { EventHub.AgentTypes.Paper, "Wind Icon" },
+      { EventHub.AgentTypes.Scissors, "Fire Icon" },
+      { EventHub.AgentTypes.Rock, "Ice Icon" }
+    };
+
+    string resourceName = _spritesByType[_agentType];
+    Debug.Log(resourceName);
+    _sprites = Resources.LoadAll<Sprite>(resourceName);
+    Debug.Log($"Sprite Count: {_sprites.Length}");
+
   }
 
   private void OnAgentBuilding (EventHub.AgentTypes type, float cooldown) {
@@ -52,6 +64,8 @@ public class SpriteButtonBehaviour : MonoBehaviour {
   }
 
   [SerializeField] private EventHub.AgentTypes _agentType;
+  
+  private Dictionary<EventHub.AgentTypes, string> _spritesByType;
   private Button _button;
   
 }

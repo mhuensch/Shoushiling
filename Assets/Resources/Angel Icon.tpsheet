@@ -4,10 +4,10 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:6a07a3c4c34d4553c6c24ff38c782f79:4801b5a20ba448900d8292bb3fd95569:b4063dea2dc3862e3f752f1c5aea8f75$
+# $TexturePacker:SmartUpdate:ed9324e81d88f0d8d22aad8923393759:c5fdec9f844ca359d1818a60b39e49de:eb93c55cee9e396710f952ef02c8302e$
 #
 :format=40300
-:texture=Wind Icon.png
+:texture=Angel Icon.png
 :size=2048x2048
 :pivotpoints=enabled
 :borders=disabled

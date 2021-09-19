@@ -4,10 +4,10 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:6a07a3c4c34d4553c6c24ff38c782f79:4801b5a20ba448900d8292bb3fd95569:b4063dea2dc3862e3f752f1c5aea8f75$
+# $TexturePacker:SmartUpdate:44795a989f2b4f59e2e848f700902a53:01d3aec24ec352c0e48d65b3318d62f6:75f8dee14ab0f978c1d9db38fe0c2913$
 #
 :format=40300
-:texture=Wind Icon.png
+:texture=Bomb Icon.png
 :size=2048x2048
 :pivotpoints=enabled
 :borders=disabled
