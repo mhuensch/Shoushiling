@@ -1,0 +1,45 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:a03c9de80d80e8938a7ce348bcfbf0fc:829e336b6e31db1d2a41ecfcac0ad369:b4063dea2dc3862e3f752f1c5aea8f75$
+#
+:format=40300
+:texture=Wind Icon.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+imageonline-extractgif-76938-1;0;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-2;339;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-13;678;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-24;1017;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-25;1356;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-26;1695;1709;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-27;0;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-28;339;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-29;678;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-76938-30;1017;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-3;1356;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-4;1695;1370;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-5;0;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-6;339;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-7;678;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-8;1017;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-9;1356;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-10;1695;1031;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-11;0;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-12;339;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-14;678;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-15;1017;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-16;1356;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-17;1695;692;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-18;0;353;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-19;339;353;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-20;678;353;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-21;1017;353;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-22;1356;353;339;339; 0.5;0.5; 0;0;0;0
+imageonline-extractgif-769382-23;1695;353;339;339; 0.5;0.5; 0;0;0;0
