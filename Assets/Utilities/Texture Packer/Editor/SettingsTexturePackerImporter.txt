@@ -1,0 +1,24 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/Agents/Angel/Icons/Angel Icon.tpsheet
+- Assets/Agents/Bomb/Icons/Bomb Icon.tpsheet
+- Assets/Agents/Fire/Icons/Fire Icon.tpsheet
+- Assets/Agents/Ice/Icons/Ice Icon.tpsheet
+- Assets/Agents/Wind/Icons/Wind Icon.tpsheet
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+textureFileNames:
+- Assets/Agents/Angel/Icons/Angel Icon.png
+- Assets/Agents/Bomb/Icons/Bomb Icon.png
+- Assets/Agents/Fire/Icons/Fire Icon.png
+- Assets/Agents/Ice/Icons/Ice Icon.png
+- Assets/Agents/Wind/Icons/Wind Icon.png
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+normalmapFileNames:
+- 
+- 
+- 
+- 
+- 
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+enableDebugOutput: 0

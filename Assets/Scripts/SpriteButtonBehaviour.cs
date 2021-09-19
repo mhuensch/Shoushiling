@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 
 public class SpriteButtonBehaviour : MonoBehaviour {
   [SerializeField] private Image _spriteImage;
@@ -27,9 +28,12 @@ public class SpriteButtonBehaviour : MonoBehaviour {
 
     string resourceName = _spritesByType[_agentType];
     Debug.Log(resourceName);
-    _sprites = Resources.LoadAll<Sprite>(resourceName);
-    Debug.Log($"Sprite Count: {_sprites.Length}");
 
+    Addressables.LoadAssetAsync<Sprite[]>(resourceName).Completed += OnLoadDone;
+  }
+
+  private void OnLoadDone (UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<Sprite[]> obj) {
+    _sprites = obj.Result;
   }
 
   private void OnAgentBuilding (EventHub.AgentTypes type, float cooldown) {
@@ -40,9 +44,6 @@ public class SpriteButtonBehaviour : MonoBehaviour {
 	public float spritePerFrame = 1f;
 	public bool loop = true;
 	public bool destroyOnEnd = false;
-
-	private int index = 0;
-	private float frame = 0f;
 
   private void Update () {
     _elapsedTime  += Time.deltaTime;
