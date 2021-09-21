@@ -78,7 +78,16 @@ MonoBehaviour:
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
-    - default
+    - Bomb Icon
+    - Paper Icon
+    - Rock Icon
+    - Scissors Icon
+    - Scout Icon
+    - Bomb Prefab
+    - Paper Prefab
+    - Rock Prefab
+    - Scissors Prefab
+    - Scout Prefab
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 0803be0e365dc47fcaf8fe1c898986ad, type: 2}

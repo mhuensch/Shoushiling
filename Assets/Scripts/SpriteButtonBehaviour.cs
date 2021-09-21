@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SpriteButtonBehaviour : MonoBehaviour {
   [SerializeField] private Image _spriteImage;
@@ -18,21 +19,10 @@ public class SpriteButtonBehaviour : MonoBehaviour {
 
     _timePerFrame = 1f / _frameRate;
 
-    _spritesByType = new Dictionary<EventHub.AgentTypes, string> {
-      { EventHub.AgentTypes.Paper, "Wind Icon" },
-      { EventHub.AgentTypes.Scissors, "Fire Icon" },
-      { EventHub.AgentTypes.Rock, "Ice Icon" },
-      { EventHub.AgentTypes.Bomb, "Bomb Icon" },
-      { EventHub.AgentTypes.Scout, "Angel Icon" }
-    };
-
-    string resourceName = _spritesByType[_agentType];
-    Debug.Log(resourceName);
-
-    Addressables.LoadAssetAsync<Sprite[]>(resourceName).Completed += OnLoadDone;
+    Addressables.LoadAssetAsync<Sprite[]>($"{_agentType} Icon").Completed += OnSpritesLoaded;
   }
 
-  private void OnLoadDone (UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<Sprite[]> obj) {
+  private void OnSpritesLoaded (AsyncOperationHandle<Sprite[]> obj) {
     _sprites = obj.Result;
   }
 
@@ -67,8 +57,6 @@ public class SpriteButtonBehaviour : MonoBehaviour {
   }
 
   [SerializeField] private EventHub.AgentTypes _agentType;
-  
-  private Dictionary<EventHub.AgentTypes, string> _spritesByType;
   private Button _button;
-  
+
 }

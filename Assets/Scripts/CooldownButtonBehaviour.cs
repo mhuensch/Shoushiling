@@ -7,14 +7,14 @@ public class CooldownButtonBehaviour : MonoBehaviour {
   private void Awake () {
     _button = this.GetComponent<Button>();
     _button.onClick.AddListener(OnButtonClicked);
-    EventHub.OnAgentBuilding += OnAgentBuilding;
+    EventHub.OnSpawning += OnSpawning;
   }
 
   private void OnButtonClicked () {
-    EventHub.AgentTypeSelected(_agentType);
+    EventHub.SpawnTypeSelected(_agentType);
   }
 
-  private void OnAgentBuilding (EventHub.AgentTypes type, float cooldown) {
+  private void OnSpawning (EventHub.AgentTypes type, float cooldown) {
     _button.interactable = false;
     _cooldown = cooldown;
     _cooldownImage.fillAmount = 0;
@@ -27,7 +27,7 @@ public class CooldownButtonBehaviour : MonoBehaviour {
 
   private void Destroy () {
     _button.onClick.RemoveListener(OnButtonClicked);
-    EventHub.OnAgentBuilding -= OnAgentBuilding;
+    EventHub.OnSpawning -= OnSpawning;
   }
 
   [SerializeField] private Image _cooldownImage;

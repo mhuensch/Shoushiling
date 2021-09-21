@@ -20,23 +20,53 @@ MonoBehaviour:
   - m_GUID: 3ac23cb77344a4b8faa17b5ffce27ad8
     m_Address: Angel Icon
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Scout Icon
   - m_GUID: 4d2cee0f9cfac47ad9747aa3dbf7a570
     m_Address: Bomb Icon
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Bomb Icon
   - m_GUID: f21ae7ee576e2423e9aac2e2bfc49688
     m_Address: Fire Icon
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Scissors Icon
   - m_GUID: ba6ea6637aed3422ea909a64110c380a
     m_Address: Ice Icon
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Rock Icon
   - m_GUID: ec60147fb4f5b49fc8712c8f0c4589b7
     m_Address: Wind Icon
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Paper Icon
+  - m_GUID: cd08a534bbc69bc44bc146556a4382b4
+    m_Address: Angel
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scout Prefab
+  - m_GUID: ee962d11fdfd95a47840ec0e79ba2482
+    m_Address: Bomb
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bomb Prefab
+  - m_GUID: 8a0d7309dd0856d4daa3742a1b89b843
+    m_Address: Fire
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Scissors Prefab
+  - m_GUID: eee1d4c81c3c1fb428cd35d96893e53e
+    m_Address: Ice
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Rock Prefab
+  - m_GUID: a8ded86d01e358c4d95203988f72feb4
+    m_Address: Wind
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Paper Prefab
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1744ceecae36143a389e9fec9d5597cc, type: 2}
   m_SchemaSet:
