@@ -8,6 +8,8 @@ public class Spawnable : MonoBehaviour {
 
   private void Awake () {
     EventHub.OnSpawned += OnSpawned;
+    
+    EventHub.OnTargetableDoubleTarget += OnTargetableDoubleTarget;
   }
 
   private void Start () {
@@ -19,14 +21,23 @@ public class Spawnable : MonoBehaviour {
     UpdateMovement();
   }
 
-  private void OnSpawned (Spawnable spawned, Vector3 rallyPoint) {
+  private void OnSpawned (Spawnable spawned, EventHub.AgentTypes type, Vector3 rallyPoint) {
     if (spawned != this) return;
 
     _rallyPoint = rallyPoint;
+    _spawnType = type;
 
     _controllable = GetComponent<Controllable>();
     if (_controllable == null) return;
     _controllable.OnRallyPointSet += OnRallyPointSet;
+  }
+
+  private void OnTargetableDoubleTarget (Targetable target) {
+    Spawnable spawnableTarget = target.GetComponent<Spawnable>();
+    if (spawnableTarget == null || spawnableTarget._spawnType != _spawnType) return;
+
+    Debug.Log($"Double Target: {_spawnType}");
+    EventHub.TargetableTargeted(GetComponent<Targetable>(), this.transform.position);
   }
 
   private void OnRallyPointSet (object source, Vector3 rallyPoint) {
@@ -57,11 +68,14 @@ public class Spawnable : MonoBehaviour {
   }
 
   private void OnDestroy () {
+    EventHub.OnTargetableDoubleTarget -= OnTargetableDoubleTarget;
+
     EventHub.OnSpawned -= OnSpawned;
     if (_controllable != null) _controllable.OnRallyPointSet -= OnRallyPointSet;
   }
 
   [SerializeField] private Vector3 _rallyPoint;
+  [SerializeField] private EventHub.AgentTypes _spawnType;
 
   private Camera _camera;
   private Controllable _controllable;

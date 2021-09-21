@@ -22,6 +22,10 @@ public class EventHub {
   public static event TargetableRemoveTargetDelegate OnTargetableRemoveTarget;
   public static void TargetableRemoveTarget (Targetable target) { OnTargetableRemoveTarget?.Invoke(target); }
 
+  public delegate void TargetableDoubleTargetDelegate(Targetable target);
+  public static event TargetableDoubleTargetDelegate OnTargetableDoubleTarget;
+  public static void TargetableDoubleTarget (Targetable target) { OnTargetableDoubleTarget?.Invoke(target); }
+
 
   // Global Notifications for Spawner Game Objects
   public delegate void SpawnTypeSelectedDelegate(AgentTypes type);
@@ -32,9 +36,9 @@ public class EventHub {
   public static event SpawningDelegate OnSpawning;
   public static void Spawning (AgentTypes type, float cooldown) { OnSpawning?.Invoke(type, cooldown); }
 
-  public delegate void SpawnedDelegate(Spawnable spawn, Vector3 rallyPoint);
+  public delegate void SpawnedDelegate(Spawnable spawn, AgentTypes type, Vector3 rallyPoint);
   public static event SpawnedDelegate OnSpawned;
-  public static void Spawned (Spawnable spawn, Vector3 rallyPoint) { OnSpawned?.Invoke(spawn, rallyPoint); }
+  public static void Spawned (Spawnable spawn, AgentTypes type, Vector3 rallyPoint) { OnSpawned?.Invoke(spawn, type, rallyPoint); }
 
 
   // Global Notifications for Stage Game Object

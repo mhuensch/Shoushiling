@@ -16,11 +16,11 @@ public class Controllable : MonoBehaviour {
     _targetable.OnTargetRemoved += OnTargetRemoved;
   }
 
-  private void OnTargeted (object sender, Vector3 point) {
+  private void OnTargeted (Vector3 point) {
     _targeted = true;
   }
 
-  private void OnTargetRemoved (object sender, EventArgs e) {
+  private void OnTargetRemoved () {
     _targeted = false;
   }
 

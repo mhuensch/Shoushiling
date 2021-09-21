@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class SpriteButtonBehaviour : MonoBehaviour {
+public class SpriteButton : MonoBehaviour {
   [SerializeField] private Image _spriteImage;
   private Sprite[] _sprites;
   public int _frameRate = 30;

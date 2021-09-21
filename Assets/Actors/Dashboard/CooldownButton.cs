@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CooldownButtonBehaviour : MonoBehaviour {
+public class CooldownButton : MonoBehaviour {
   private void Awake () {
     _button = this.GetComponent<Button>();
     _button.onClick.AddListener(OnButtonClicked);

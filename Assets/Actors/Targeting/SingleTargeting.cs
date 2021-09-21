@@ -17,12 +17,13 @@ public class SingleTargeting : MonoBehaviour {
 
   private void OnTargetableTargeted (Targetable target, Vector3 point) {
     Debug.Log($"Adding: {target}");
-    _targeted.Add(target);
+    _targeted = target;
   }
 
   private void OnTargetableRemoveTarget (Targetable target) {
     Debug.Log($"Removing: {target}");
-    _targeted.Remove(target);
+    if (_targeted != target) return;
+    _targeted = null;
   }
 
   private void Update () {
@@ -49,21 +50,38 @@ public class SingleTargeting : MonoBehaviour {
     // Confirm that the object hit is a targetable or leave the method.
     Targetable target = hitObject.GetComponent<Targetable>();
     if (target == null) return;
-    
+
     // Raise an event so any listeners know something was targeted.
-    if (_targeted.Contains(target) == false) {
-      EventHub.TargetableTargeted(target, hitData.point);
+    if (_lastTargeted == target && Time.time - _lastTargetedOn < _doubleClickSensitivity) {
+      // WHEN IT'S A DOUBLE CLICK ON THE SAME TARGET
+      EventHub.TargetableDoubleTarget(target);
+    }
+    else if (_targeted == target) {
+      // WHEN IT'S THE SAME TARGET
+      EventHub.TargetableRemoveTarget(_targeted);
     }
     else {
-      EventHub.TargetableRemoveTarget(target);
-    }
+      // WHEN IT'S A DIFFERENT TARGET
+      if (_targeted != null) EventHub.TargetableRemoveTarget(_targeted);
+      EventHub.TargetableTargeted(target, hitData.point);
+    } 
+ 
+    _lastTargeted = target;
+    _lastTargetedOn = Time.time;
   }
+
 
   private void OnDestroy () {
     EventHub.OnTargetableTargeted -= OnTargetableTargeted;
     EventHub.OnTargetableRemoveTarget -= OnTargetableRemoveTarget;
   }
 
+  [SerializeField] private float _doubleClickSensitivity = 0.25f;
+
   private Camera _camera;
-  private List<Targetable> _targeted = new List<Targetable>();
+  private Targetable _targeted;
+
+  private float _lastTargetedOn;
+  private Targetable _lastTargeted;
+  
 }

@@ -28,13 +28,13 @@ public class Outlineable : MonoBehaviour {
     _material.shader = _shaderWithoutOutline;
   }
 
-  private void OnTargeted (object sender, Vector3 point) {
+  private void OnTargeted (Vector3 point) {
     if (_material == null) return;
 
     _material.shader = _originalOutlineShader;
   }
 
-  private void OnTargetRemoved (object sender, EventArgs e) {
+  private void OnTargetRemoved () {
     if (_material == null) return;
 
     _material.shader = _shaderWithoutOutline;

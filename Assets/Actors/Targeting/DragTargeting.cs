@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class MultipleTargeting : MonoBehaviour {
+public class DragTargeting : MonoBehaviour {
 
   public void Awake () {
     EventHub.OnTargetableCreated += OnTargetableCreated;
@@ -23,8 +23,8 @@ public class MultipleTargeting : MonoBehaviour {
   }
 
   private void OnTargetableCreated (Targetable target) {
+    if (_targets.Contains(target)) return;
     _targets.Add(target);
-    _targets.ForEach(target => Debug.Log($"Targeting Added: {target.name}"));
   }
 
   private void OnTargetableDestroyed (Targetable target) {

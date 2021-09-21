@@ -55,13 +55,13 @@ public class Spawner : MonoBehaviour {
       spawned.gameObject.AddComponent<Controllable>();
     }
 
+    // Notify all listeners that a new game object was spawned and the rally point of this factory.
+    // This is mainly done to let the instantiated spawn know where to rally to without having to reference a public method.
+    EventHub.Spawned(spawned, _spawnType, _rallyPoint);
+
     // Reset the spawn countdown and the spawn type to none.
     _spawnCountdown -= _spawnDelay;
     _spawnType = EventHub.AgentTypes.None;
-    
-    // Notify all listeners that a new game object was spawned and the rally point of this factory.
-    // This is mainly done to let the instantiated spawn know where to rally to without having to reference a public method.
-    EventHub.Spawned(spawned, _rallyPoint);
   }
 
   private void OnSpawnTypeSelected (EventHub.AgentTypes spawnType) {
@@ -75,13 +75,13 @@ public class Spawner : MonoBehaviour {
     _spawnPrefab = obj.Result;
   }
 
-  private void OnTargeted (object sender, Vector3 point) {
+  private void OnTargeted (Vector3 point) {
     ShowRallyLine();
   }
 
-  private void OnTargetRemoved (object sender, EventArgs e) {
+  private void OnTargetRemoved () {
     ShowRallyLine();
-     Invoke("HideRallyLine", 0.75f);
+    this.InvokeAfter(0.75f, HideRallyLine);
   }
 
   private void ShowRallyLine () {
