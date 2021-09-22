@@ -76,10 +76,13 @@ public class Spawner : MonoBehaviour {
   }
 
   private void OnTargeted (Vector3 point) {
+    _specificallyTargeted = true;
     ShowRallyLine();
   }
 
   private void OnTargetRemoved () {
+    if (_specificallyTargeted == false) return;
+    _specificallyTargeted = false;
     ShowRallyLine();
     this.InvokeAfter(0.75f, HideRallyLine);
   }
@@ -124,6 +127,8 @@ public class Spawner : MonoBehaviour {
   [SerializeField] private float _spawnDelay = 1f;
   [SerializeField] private float _spawnCountdown = 0f;
   
+  private bool _specificallyTargeted = false;
+
   private Targetable _targetable;
   private LineRenderer _rallyLine;
   private GameObject _spawnPrefab;

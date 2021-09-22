@@ -7,6 +7,9 @@ using UnityEngine;
 public class SingleTargeting : MonoBehaviour {
 
   public void Awake () {
+    EventHub.OnTargetableCreated += OnTargetableCreated;
+    EventHub.OnTargetableDestroyed += OnTargetableDestroyed;
+
     EventHub.OnTargetableTargeted += OnTargetableTargeted;
     EventHub.OnTargetableRemoveTarget += OnTargetableRemoveTarget;
   }
@@ -15,6 +18,15 @@ public class SingleTargeting : MonoBehaviour {
     _camera = Camera.main;
   }
 
+  private void OnTargetableCreated (Targetable target) {
+    if (_targets.Contains(target)) return;
+    _targets.Add(target);
+  }
+
+  private void OnTargetableDestroyed (Targetable target) {
+    _targets.Remove(target);
+  }
+  
   private void OnTargetableTargeted (Targetable target, Vector3 point) {
     Debug.Log($"Adding: {target}");
     _targeted = target;
@@ -54,6 +66,7 @@ public class SingleTargeting : MonoBehaviour {
     // Raise an event so any listeners know something was targeted.
     if (_lastTargeted == target && Time.time - _lastTargetedOn < _doubleClickSensitivity) {
       // WHEN IT'S A DOUBLE CLICK ON THE SAME TARGET
+      _targets.ForEach(target => EventHub.TargetableRemoveTarget(target));
       EventHub.TargetableDoubleTarget(target);
     }
     else if (_targeted == target) {
@@ -72,6 +85,9 @@ public class SingleTargeting : MonoBehaviour {
 
 
   private void OnDestroy () {
+    EventHub.OnTargetableCreated -= OnTargetableCreated;
+    EventHub.OnTargetableDestroyed -= OnTargetableDestroyed;
+
     EventHub.OnTargetableTargeted -= OnTargetableTargeted;
     EventHub.OnTargetableRemoveTarget -= OnTargetableRemoveTarget;
   }
@@ -80,6 +96,7 @@ public class SingleTargeting : MonoBehaviour {
 
   private Camera _camera;
   private Targetable _targeted;
+  private List<Targetable> _targets = new List<Targetable>();
 
   private float _lastTargetedOn;
   private Targetable _lastTargeted;
